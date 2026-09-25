@@ -32,7 +32,7 @@ export default class Bowl {
     setMaterial() {
         this.material = new THREE.MeshStandardNodeMaterial({ side: THREE.DoubleSide })
         this.material.positionNode = createBowlPositionNode(this.uHoverCell, this.uNbCells, this.uAmplitude)
-        this.material.colorNode = createBowlColorNode(this.uBorder, this.uRoseColor, this.uSilverColor, this.uNbCells, this.uHoverCell)
+        this.material.colorNode = createBowlColorNode(this.uBorder, this.uRoseColor, this.uSilverColor, this.uNbCells, this.uHoverCell, this.uvColor)
         this.material.roughnessNode = createBowlRoughnessNode(this.uNbCells)
         this.material.emissiveNode = createBowlEmissiveNode(this.uNbCells, this.uHoverCell, this.uSparkleColor, this.uSparkleIntensity)
         this.material.metalness = 0.92

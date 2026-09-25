@@ -4,6 +4,7 @@ import Controls from './Controls.js'
 import Environment from './Environment.js'
 import Floor from './objects/Floor.js'
 import Bowl from './objects/Bowl.js'
+import Paillettes from './objects/Paillettes.js'
 import Lights from './lights/Lights.js'
 import Mouse from './Mouse.js'
 import PostProcessing from './PostProcessing.js'
@@ -31,6 +32,7 @@ export default class Experience {
         await this.environment.bake()
         this.floor = new Floor(this.scene.instance, this.renderer.instance)
         this.bowl = new Bowl(this.scene.instance, this.renderer.instance, this.mouse, this.camera.instance)
+        this.paillettes = new Paillettes(this.scene.instance, this.renderer.instance)
         this.lights = new Lights(this.scene.instance, this.renderer.instance)
         window.addEventListener('mousemove', () => this.bowl.checkIntersections())
         this.renderer.instance.setAnimationLoop(() => this.tick())
